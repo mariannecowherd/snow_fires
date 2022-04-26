@@ -1,3 +1,4 @@
+#!/usr/bin/env bash
 ## file to define values and folders
 import geopandas as gpd
 import matplotlib
@@ -12,13 +13,13 @@ def normalize(data):
 path = os.path.expanduser('~')
 
 
-home_dir=path + '/documents/pe_snow_fires/'
+homedir= '/global/home/users/cowherd/snow_fires/'
+datadir = '/global/scratch/users/cowherd/'
 
-pe_data_dir = path + '/documents/pe_snow_fires/data/'
-sn_watersheds= gpd.read_file(pe_data_dir + 'sn_watersheds.shp')
-data_dir = path + '/documents/data/'
-mtbs= gpd.read_file(data_dir + 'mtbs_perimeter_data/mtbs_perims_DD.shp')
-fire_sn = gpd.read_file(pe_data_dir + 'firebounds_sn.gdf')
+sn_watersheds= gpd.read_file(datadir + 'sn_watersheds.shp')
+
+mtbs= gpd.read_file(datadir + 'mtbs_perimeter_data/mtbs_perims_DD.shp')
+fire_sn = gpd.read_file(datadir + 'firebounds_sn.gdf')
 
 blues = matplotlib.cm.get_cmap('Blues', 256)
 newcolors = blues(np.linspace(0, 1.5, 256))
