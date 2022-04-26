@@ -3,3 +3,9 @@
 
 # slurm
 slurm*
+
+# pycachy
+__pycache__
+
+# checkpoints
+.ipynb_checkpoints/
