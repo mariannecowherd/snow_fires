@@ -9,3 +9,6 @@ __pycache__
 
 # checkpoints
 .ipynb_checkpoints/
+
+# jobs
+*.sh
