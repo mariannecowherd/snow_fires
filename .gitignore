@@ -12,3 +12,6 @@ __pycache__
 
 # jobs
 *.sh
+
+# dem files
+/data/dem/

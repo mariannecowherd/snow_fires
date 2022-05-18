@@ -8,6 +8,7 @@ import pickle
 from constants import *
 
 
+rawdatadir = '~/Documents/data/'
 wgs_crs = crs.CRS('epsg:4326')
 
 ## load fire data
