@@ -10,6 +10,8 @@ from shapely.geometry import Point
 
 wgs_crs = crs.CRS('epsg:4326')
 
+rawdatadir = '/home/marianne/Documents/data/'
+
 print('this should take about 10 mins')
 ## fires data
 # wfigs 2021 fires perimeters
@@ -30,6 +32,7 @@ bas_all = pd.concat([bas_nonref,bas_ref])
 bas_all = bas_all.set_crs(bas_ref.crs)
 bas_all = bas_all.to_crs(wgs_crs) # with wgs 84 CRS
 
+datadir = '/home/marianne/Documents/snow_fires/data/'
 with open(datadir + 'streamflow_metadata.pickle', 'rb') as handle:
     streamflow_metadata = pickle.load(handle)
 
