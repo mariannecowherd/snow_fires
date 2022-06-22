@@ -15,3 +15,6 @@ __pycache__
 
 # dem files
 /data/*dem*
+
+# local dirs
+/scripts/dirs.py
