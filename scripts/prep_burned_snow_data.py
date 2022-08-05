@@ -51,7 +51,7 @@ with open(datadir + 'streamflow_metadata.pickle', 'rb') as handle:
 gaged_fires = gpd.overlay(gaged_basins,mtbs)
 snow_in = gpd.overlay(gaged_basins,snowzone)
 ## good up to here
-
+""""
 gages = np.unique(gaged_basins.GAGE_ID)
 years = []
 props_burned = []
@@ -119,7 +119,7 @@ burn_snow_history_all['snow_burned_prop'] = sba_props
 
 
 with open(datadir + 'burn_snow_history_all.pickle', 'wb') as handle:
-    pickle.dump(burn_snow_history_all, handle,protocol=pickle.HIGHEST_PROTOCOL)
+    pickle.dump(burn_snow_history_all, handle,protocol=pickle.HIGHEST_PROTOCOL)"""
 
 ## now just target
 
@@ -198,7 +198,7 @@ burn_snow_history_target = pd.DataFrame({
             'burned_prop':props_burned,
             'snowy_area':snowy_areas,
             'snowy_burned_area': snowy_burned_areas,
-            'snowy_prop': snow_prop,
+            'snowy_prop': snow_props,
             'sba_xs_prop': sba_xs_props,
             'sba_prop':sba_props
         })
